@@ -1,3 +1,4 @@
+// Login.js
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -19,19 +20,24 @@ function Login() {
 
     try {
       const response = await axios.post(
-        'https://syoft.dev/Api/userlogin/api/userlogin',
+        'https://syoft.dev/Api/userlogin', // Ensure this URL is correct
         formData
       );
 
       if (response.status === 200) {
+        // Save token and user data to local storage
         localStorage.setItem('token', response.data.token);
         localStorage.setItem('userData', JSON.stringify(response.data.user));
+        
+        // Navigate to the dashboard
         navigate('/dashboard', { replace: true });
       } else {
         console.error('Login failed:', response.data);
+        alert('Login failed. Please check your credentials and try again.');
       }
     } catch (error) {
       console.error('Error during login:', error);
+      alert('An error occurred during login. Please try again later.');
     }
   };
 
@@ -46,9 +52,7 @@ function Login() {
 
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <label htmlFor="user_email" className="form-label">
-              Email Address
-            </label>
+            <label htmlFor="user_email" className="form-label">Email Address</label>
             <input
               type="email"
               id="user_email"
@@ -58,13 +62,11 @@ function Login() {
               required
               className="form-input"
               placeholder="johndoe@example.com"
-              autocomplete="email"
+              autoComplete="email"
             />
           </div>
           <div className="form-group">
-            <label htmlFor="user_password" className="form-label">
-              Password
-            </label>
+            <label htmlFor="user_password" className="form-label">Password</label>
             <input
               type="password"
               id="user_password"
@@ -74,12 +76,10 @@ function Login() {
               required
               className="form-input"
               placeholder="●●●●●●●●●●"
-              autocomplete="current-password"
+              autoComplete="current-password"
             />
           </div>
-          <button type="submit" className="login-btn">
-            Sign In
-          </button>
+          <button type="submit" className="login-btn">Sign In</button>
           <p className="login-link">
             Don't have an account? <a href="/sign-up">Sign Up</a>
           </p>

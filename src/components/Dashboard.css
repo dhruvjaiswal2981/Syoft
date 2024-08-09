@@ -1,85 +1,94 @@
+/* Dashboard.css */
+
 .dashboard-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: linear-gradient(to bottom, #f7f7f7, #e7e7e7);
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    font-family: 'Open Sans', sans-serif;
-  }
-  
-  .dashboard-header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .dashboard-title {
-    font-size: 36px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .dashboard-subtitle {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 20px;
-  }
-  
-  .dashboard-content {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 600px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .user-info {
-    margin-top: 20px;
-  }
-  
-  .user-info-title {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .user-info-label {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 5px;
-  }
-  
-  .user-info-value {
-    font-size: 16px;
-    color: #333;
-    font-weight: bold;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  li {
-    margin-bottom: 10px;
-  }
-  
-  li::before {
-    content: '';
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background-color: #333;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('https://picsum.photos/200/300');
+  font-family: 'Open Sans', sans-serif;
+}
+
+.dashboard-content {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.dashboard-header {
+  margin-bottom: 30px;
+}
+
+.dashboard-title {
+  font-size: 36px;
+  font-weight: 700; /* Bold */
+  color: #333;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-subtitle {
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 30px;
+  font-weight: 400; /* Normal weight */
+}
+
+.user-info {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.user-info-title {
+  font-size: 28px;
+  font-weight: 700; /* Bold */
+  color: #333;
+  margin-bottom: 15px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-info-label {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 5px;
+  display: block;
+  text-align: left; /* Align labels to the left */
+  font-weight: 600; /* Semi-bold */
+}
+
+.user-info-value {
+  font-size: 18px;
+  color: #333;
+  font-weight: 700; /* Bold */
+  margin-bottom: 20px;
+  text-align: left; /* Align values to the left */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  text-align: left; /* Align text to the left */
+}
+
+li::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #007bff;
+  border-radius: 50%;
+  margin-right: 15px;
+}

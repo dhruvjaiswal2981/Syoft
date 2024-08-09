@@ -1,19 +1,18 @@
+// src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import Login from './components/Login';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SignUp from './components/SignUp';
+import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/login" element={<Login />} />
         <Route path="/sign-up" element={<SignUp />} />
-        {/* Example of redirecting from '/' to '/login' */}
-        <Route path="/" element={<Navigate to="/login" />} />
-        {/* Define other routes as needed */}
+        <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/" element={<SignUp />} /> {/* Default route */}
       </Routes>
     </Router>
   );

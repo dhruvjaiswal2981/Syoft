@@ -1,3 +1,4 @@
+// SignUp.js
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -52,9 +53,7 @@ function SignUp() {
 
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <label htmlFor="user_firstname" className="form-label">
-              Full Name
-            </label>
+            <label htmlFor="user_firstname" className="form-label">Full Name</label>
             <input
               type="text"
               id="user_firstname"
@@ -68,9 +67,7 @@ function SignUp() {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="user_email" className="form-label">
-              Email Address
-            </label>
+            <label htmlFor="user_email" className="form-label">Email Address</label>
             <input
               type="email"
               id="user_email"
@@ -84,9 +81,7 @@ function SignUp() {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="user_phone" className="form-label">
-              Phone Number
-            </label>
+            <label htmlFor="user_phone" className="form-label">Phone Number</label>
             <input
               type="tel"
               id="user_phone"
@@ -100,9 +95,7 @@ function SignUp() {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="user_password" className="form-label">
-              Password
-            </label>
+            <label htmlFor="user_password" className="form-label">Password</label>
             <input
               type="password"
               id="user_password"
@@ -115,12 +108,8 @@ function SignUp() {
               autoComplete="new-password"
             />
           </div>
-          <button type="submit" className="signup-btn">
-            Create Account
-          </button>
-          <p className="signup-link">
-            Already have an account? <a href="/login">Sign In</a>
-          </p>
+          <button type="submit" className="signup-btn">Create Account</button>
+          <p className="signup-link">Already have an account? <a href="/login">Sign In</a></p>
         </form>
       </div>
     </div>
